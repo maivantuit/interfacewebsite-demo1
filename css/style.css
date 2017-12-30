@@ -1,0 +1,132 @@
+/*
+	+ Từ ngoài vào. Từ trên xuống dưới. Xong footer là mình xong hết rồi. 
+	0. Tạo bố cục trước, sau này khỏi bị vỡ.
+*/
+body{
+	font-family: sans-serif;
+	font-size: 13px;
+	width: 1000px;
+	margin: 0px auto; /*mặc định left right là auto, tự căn*/
+	color: green;
+}
+/**==#menu-top==**/
+#menu_top{
+	background: #141414;
+	height: 40px;
+}
+#menu_top ul{ /*bất kỳ trình duyệt nào, đối với thẻ ul thì reset css bằng margin:0px and padding:0px.*/
+	margin: 0px;
+	padding: 0px;
+
+}	
+#menu_top ul li{
+	list-style: none; /*bỏ icon trước danh sách*/
+	float: left; /*cho danh sách trở về hàng ngang, nó dồn lại qua trái*/	
+}
+#menu_top ul li a{
+	text-decoration: none;
+	display: block; /*vẫn bị dính float left*/
+	height: 40px;
+	line-height: 40px; /*= đúng height của menu, căn giữa theo chiều dọc*/
+	color: #fff;
+	padding: 0px 10px 0px 10px;
+	border-right:1px solid #333;
+}
+#menu_top ul li .active{ /*đến thẻ li rồi đến .active, không tới thẻ a nữa*/
+	background: #1949b5;	
+}
+#menu_top ul li:hover{
+	background: #333;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+}
+/**==#banner==**/
+#banner{
+	height: auto; /*có thể là ảnh lớn, cho auto theo nội dung (text or images)*/
+	width: 1000px;
+}
+#banner img{ /*thiết kế ảnh bằng photoshop đúng chuẩn, để khi nhúng vào html, k phải bị, bị vỡ thêm*/
+	width: 1000px; /*do ảnh wight nhỏ*/
+}
+/**==#content==**/
+#content{
+	margin-top: 10px;
+}
+#content #content-left{
+	width: 700px;
+	float: left;
+	min-height: 400px;
+}
+#content #content-left ul{
+	margin: 0px;
+	padding: 0px;
+}
+#content #content-left ul li{
+	list-style: none;
+	clear: both;
+	border-bottom: 2px solid #ccc;	
+	float: left; /* phải có thuộc tính phải giống với img kia, có thể có vấn đề như này*/
+	margin-bottom: 20px;		
+}
+#content #content-left ul li img{
+	float: left;	
+	margin-bottom: 20px;
+	margin-right:10px;
+}
+#content #content-left ul li h2{
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+}
+#content #content-right{
+	width: 300px;	
+	float: left;
+	min-height: 400px;
+}
+#content #content-right .menu_right ul{ /*việc đặt ul như này lặp đi lắp lại, sau không định dạng ul{} riêng, ban đầu*/
+	margin: -15px 0px 0px 0px; /*nhớ trừ nhé, khi margin 0px không thay đổi thì ta sử dụng - âm.*/
+	padding: 0px;
+	border: 1px solid #ccc;	
+}
+#content #content-right .menu_right ul li{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;	
+}
+#content #content-right .menu_right ul li a{
+	display: block;
+	text-decoration: none;
+	line-height: 45px;
+	border-bottom: 1px solid #ccc;
+	background: url(../images/menuicon2.png) no-repeat 2px;
+	text-indent: 25px;
+	color: green;
+	height: 40px;
+}
+#content #content-right h3{
+	background: #194d58 url(../images/menuicon.png) no-repeat 1px ; /*nên bỏ trong CSS này*/
+	height: 40px;
+	margin-top: 0px;	
+	font-size: 16px;
+	line-height: 40px;
+	color: white;
+	text-indent: 35px; /*thụt vào đầu dòng*/
+}
+#content #content-right .img-quangcao {
+	height: 700px;
+
+}
+#content #content-right .img-quangcao img{
+	height: 700px;
+	width: 300px;
+	margin-top: 50px;
+}
+#footer{
+	background: #000;
+	width: 1000px;
+	text-align: center;
+	height: 60px;
+	color: white;
+	clear: both;
+}
